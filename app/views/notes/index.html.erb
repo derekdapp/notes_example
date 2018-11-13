@@ -1,0 +1,10 @@
+<div class="container">
+  <% @notes.each do |note| %>
+    <div class="note">
+      <h2><%= note.title %></h2>
+      <p><%= note.content %></p>
+      <%= link_to "Edit", edit_note_path(note)%>
+      <%= link_to "Delete", note, method: :delete %>
+    </div>
+  <% end %>
+</div>
